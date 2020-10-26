@@ -14,7 +14,6 @@
 /// To clean files: make clean
 ///
 
-
 #include <iostream>
 #include <vector>
 
