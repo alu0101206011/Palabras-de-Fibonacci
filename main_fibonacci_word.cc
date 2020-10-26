@@ -5,7 +5,7 @@
 /// Computabilidad de algoritmia
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
-/// @date 22 Oct 2020
+/// @date 24 Oct 2020
 /// @brief Program that verifies if what is entered per file belongs to the Fibonacci sequence
 /// 
 /// @see https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci
