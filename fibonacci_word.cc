@@ -2,7 +2,7 @@
 /// Universidad de La Laguna
 /// Escuela Superior de Ingeniería y Tecnología
 /// Grado en Ingeniería Informática
-/// Computabilidad de algoritmia
+/// Computabilidad y algoritmia
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
 /// @date 24 Oct 2020
@@ -23,25 +23,22 @@
 
 
 // Show error messages in terminal
-void error_message(int error) {
-  if (error == 1) {
+void ErrorMessage(const int kError) {
+  if (kError == 1) {
     std::cerr << "Invalid arguments to function.\n" 
               << "Write ./fibonacci_words --help for more info\n";
-  } else if (error == 2) {
+  } else if (kError == 2) {
     std::cerr << "Usage: ./fibonacci_word input.txt output.txt" 
               << "\nFor OPTION:\n" 
               << "\t-h,--help\t\tShow this help message\n";
-  } else if (error == 3) {
+  } else if (kError == 3) {
     std::cerr << "Invalid file names.\n" 
-              << "Write ./fibonacci_words --help for more info\n";
-  } else if (error == 4) {
-    std::cerr << "Error opening the file.\n" 
               << "Write ./fibonacci_words --help for more info\n";
   }
 }
 
 // Read from file and introduce the data in a vector 
-std::vector<FibonacciWord> create_vector() {
+std::vector<FibonacciWord> CreateVector() {
   std::ifstream reader("input.txt");
   if (!reader) {       
     std::cerr << "Error: file could not be opened" << "\n";
@@ -59,20 +56,20 @@ std::vector<FibonacciWord> create_vector() {
 }
 
 // Write the sequence in a file
-void WriteOnFile(std::vector<FibonacciWord> list) {
+void WriteOnFile(const std::vector<FibonacciWord> kList) {
   std::ofstream writer("output.txt");
   if (!writer) {       
     std::cerr << "Error: file could not be opened" << "\n";
     exit(1);
   }
-  for (unsigned iterator = 0; iterator < list.size(); iterator++) 
-    writer << list[iterator];
+  for (unsigned iterator = 0; iterator < kList.size(); iterator++) 
+    writer << kList[iterator];
   writer.close();
 }
 
 // Class FibbonacciWord constructor 
-FibonacciWord::FibonacciWord(std::string word, unsigned size): 
-word_(word), size_(size), is_a_fibonacci_word_(false),
+FibonacciWord::FibonacciWord(const std::string kWord, const unsigned kSize): 
+word_(kWord), size_(kSize), is_a_fibonacci_word_(false),
 word_number_(0) {}
 
 // Default destructor
@@ -81,14 +78,19 @@ FibonacciWord::~FibonacciWord() {}
 // Getters
 std::string FibonacciWord::get_word() const { return word_; }
 unsigned FibonacciWord::get_size() const { return size_; }
-bool FibonacciWord::get_is_a_fibonacci_word() const { return is_a_fibonacci_word_; }
+bool FibonacciWord::get_is_a_fibonacci_word() const { 
+  return is_a_fibonacci_word_; 
+}
 unsigned FibonacciWord::get_word_number() const { return word_number_; }
 
 // Setters
-void FibonacciWord::set_word(std::string new_word) { word_ = new_word; }
-void FibonacciWord::set_size(unsigned new_size) { size_ = new_size; }
-void FibonacciWord::set_is_a_fibonacci_word(bool new_state) { 
-  is_a_fibonacci_word_ = new_state; 
+void FibonacciWord::set_word(const std::string kNewWord) { word_ = kNewWord; }
+void FibonacciWord::set_size(const unsigned kNewSize) { size_ = kNewSize; }
+void FibonacciWord::set_is_a_fibonacci_word(const bool kNewState) { 
+  is_a_fibonacci_word_ = kNewState; 
+}
+void FibonacciWord::set_word_number(const unsigned kNewNumber) { 
+  word_number_ = kNewNumber; 
 }
 
 // Search between actual Fibonacci words and return the position

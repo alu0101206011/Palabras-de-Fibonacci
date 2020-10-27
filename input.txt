@@ -1,9 +1,8 @@
 a
 b
 ab
-bababbab
-xddas
-abbabbababbab
+abbab
 bababbababbabbababbab
+abababaabbabaa
 yxyxyyxy
 dnasjk

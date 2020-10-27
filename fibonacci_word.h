@@ -1,4 +1,4 @@
-/////////////////////////////////////////////////////////////////////
+///
 /// @class FibonacciWord
 ///
 /// @brief This class compares the attribute "word_" with a real Fibonacci Word
@@ -9,7 +9,7 @@
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
 /// @version Version 2: class with string of file
 /// @date 23/10/2020
-/////////////////////////////////////////////////////////////////////
+///
 
 #ifndef FIBONACCIWORD_H
 #define FIBONACCIWORD_H
@@ -27,7 +27,7 @@ class FibonacciWord {
     /// @brief Initialize all attributes using the following parameters
     /// @param word 
     /// @param size 
-    FibonacciWord(std::string, unsigned);
+    FibonacciWord(const std::string, const unsigned);
 
     /// A destructor.
     /// @brief Default destructor
@@ -42,10 +42,10 @@ class FibonacciWord {
 
     /// The setters.
     /// @brief Replace the old attribute with a new one
-    void set_word(std::string);
-    void set_size(unsigned);
-    void set_is_a_fibonacci_word(bool);
-    void set_word_number(unsigned);
+    void set_word(const std::string);
+    void set_size(const unsigned);
+    void set_is_a_fibonacci_word(const bool);
+    void set_word_number(const unsigned);
 
     /// @brief Verify if the attribute word is an actual Fibonacci Word
     void FibonacciCheck(void);
@@ -69,17 +69,16 @@ class FibonacciWord {
     int FibonacciSearch(void) const;
 }; 
 
-#endif  // FIBONACCIWORD_H
-
-
 /// @brief Show error messages in terminal
 /// @param error
-void error_message(int); 
+void ErrorMessage(const int); 
 
 /// @brief Create a vector and reads it from a file
 /// @return list
-std::vector<FibonacciWord> create_vector(void);
+std::vector<FibonacciWord> CreateVector(void);
 
 /// @brief Write from a vector using the friend function "<<"
 /// @param list
 void WriteOnFile(std::vector<FibonacciWord>); 
+
+#endif  // FIBONACCIWORD_H
