@@ -34,10 +34,10 @@ int main(int argc, char *argv[]) {
     return 1;
   }
   std::vector<FibonacciWord> list = CreateVector();
+  
   for (unsigned iterator = 0; iterator < list.size(); iterator++)
-    list[iterator].FibonacciCheck("a", "b");
+    list[iterator].FibonacciCheck(list[0].get_word(), list[1].get_word());
   WriteOnFile(list);
 
   return 0;
-
 }

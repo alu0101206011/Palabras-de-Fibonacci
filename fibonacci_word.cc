@@ -47,9 +47,11 @@ std::vector<FibonacciWord> CreateVector() {
   std::string data;
   std::vector<FibonacciWord> list;
   while (!reader.eof()) { 
-    reader >> data;
-    FibonacciWord block(data, data.length());
-    list.push_back(block);
+    //if (!' ') {
+      reader >> data;
+      FibonacciWord block(data, data.length());
+      list.push_back(block);
+    //}
   }
   reader.close();
   return list;
@@ -94,8 +96,8 @@ void FibonacciWord::set_word_number(const unsigned kNewNumber) {
 }
 
 // Search between actual Fibonacci words and return the position
-int FibonacciWord::FibonacciSearch(const char* kFiboRoot1, 
-                                   const char* kFiboRoot2) const {
+int FibonacciWord::FibonacciSearch(const std::string kFiboRoot1, 
+                                   const std::string kFiboRoot2) const {
   if (word_ == kFiboRoot1) {
     return 1;
   } else if (word_ == kFiboRoot2) {
@@ -118,8 +120,8 @@ int FibonacciWord::FibonacciSearch(const char* kFiboRoot1,
 }
 
 /// Check if the attribute "word_" belongs to the Fibonacci sequence
-void FibonacciWord::FibonacciCheck(const char* kFiboRoot1, 
-                                   const char* kFiboRoot2) { 
+void FibonacciWord::FibonacciCheck(const std::string kFiboRoot1, 
+                                   const std::string kFiboRoot2) { 
   const int kPosition = FibonacciSearch(kFiboRoot1, kFiboRoot2);
   if (kPosition > 0) {
     is_a_fibonacci_word_ = true;

@@ -51,7 +51,7 @@ class FibonacciWord {
     /// @brief Verify if the attribute word is an actual Fibonacci Word
     /// @param kFiboRoot1
     /// @param kFiboRoot2
-    void FibonacciCheck(const char*, const char*);
+    void FibonacciCheck(const std::string, const std::string);
 
     /// @brief Write using an ostream as a parameter
     /// @param os
@@ -71,7 +71,7 @@ class FibonacciWord {
     /// @param kFiboRoot1
     /// @param kFiboRoot2
     /// @return Position
-    int FibonacciSearch(const char*, const char*) const;
+    int FibonacciSearch(const std::string, const std::string) const;
 }; 
 
 /// @brief Show error messages in terminal
