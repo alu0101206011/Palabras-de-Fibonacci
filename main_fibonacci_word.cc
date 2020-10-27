@@ -39,4 +39,5 @@ int main(int argc, char *argv[]) {
   WriteOnFile(list);
 
   return 0;
+
 }
