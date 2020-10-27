@@ -2,13 +2,14 @@
 /// @class FibonacciWord
 ///
 /// @brief This class compares the attribute "word_" with a real Fibonacci Word
-/// to verify if it is. Once verified, the class can also provide more information about the word.
+/// to verify if it is. Once verified, the class can also provide more 
+/// information about the word.
 ///
 /// @example word_ == actualFibonacciWord ? (Save information) : (reject this word)
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
 /// @version Version 2: class with string of file
-/// @date 23/10/2020
+/// @date 27 Oct 2020
 ///
 
 #ifndef FIBONACCIWORD_H
@@ -33,14 +34,14 @@ class FibonacciWord {
     /// @brief Default destructor
     ~FibonacciWord(void);
 
-    /// The getters.
+    /// Getters.
     /// @brief Helps access the attributes
     std::string get_word(void) const;
     unsigned get_size(void) const;
     bool get_is_a_fibonacci_word(void) const;
     unsigned get_word_number(void) const;
 
-    /// The setters.
+    /// Setters.
     /// @brief Replace the old attribute with a new one
     void set_word(const std::string);
     void set_size(const unsigned);
@@ -48,7 +49,9 @@ class FibonacciWord {
     void set_word_number(const unsigned);
 
     /// @brief Verify if the attribute word is an actual Fibonacci Word
-    void FibonacciCheck(void);
+    /// @param kFiboRoot1
+    /// @param kFiboRoot2
+    void FibonacciCheck(const char*, const char*);
 
     /// @brief Write using an ostream as a parameter
     /// @param os
@@ -65,8 +68,10 @@ class FibonacciWord {
   private:
 
     /// @brief Search between actual Fibonacci words and return the position
+    /// @param kFiboRoot1
+    /// @param kFiboRoot2
     /// @return Position
-    int FibonacciSearch(void) const;
+    int FibonacciSearch(const char*, const char*) const;
 }; 
 
 /// @brief Show error messages in terminal

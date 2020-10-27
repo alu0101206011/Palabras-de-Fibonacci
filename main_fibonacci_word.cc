@@ -5,7 +5,7 @@
 /// Computabilidad y algoritmia
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
-/// @date 24 Oct 2020
+/// @date 27 Oct 2020
 /// @brief Program that verifies if what is entered per file belongs to the Fibonacci sequence
 /// 
 /// @see https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
   }
   std::vector<FibonacciWord> list = CreateVector();
   for (unsigned iterator = 0; iterator < list.size(); iterator++)
-    list[iterator].FibonacciCheck();
+    list[iterator].FibonacciCheck("a", "b");
   WriteOnFile(list);
 
   return 0;

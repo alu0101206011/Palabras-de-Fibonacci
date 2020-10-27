@@ -5,7 +5,7 @@
 /// Computabilidad y algoritmia
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
-/// @date 24 Oct 2020
+/// @date 27 Oct 2020
 /// @brief Program that verifies if what is entered per file belongs to the Fibonacci sequence
 /// 
 /// @see https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci
@@ -41,7 +41,7 @@ void ErrorMessage(const int kError) {
 std::vector<FibonacciWord> CreateVector() {
   std::ifstream reader("input.txt");
   if (!reader) {       
-    std::cerr << "Error: file could not be opened" << "\n";
+    std::cerr << "Error: file could not be opened\n";
     exit(1);
   }
   std::string data;
@@ -59,7 +59,7 @@ std::vector<FibonacciWord> CreateVector() {
 void WriteOnFile(const std::vector<FibonacciWord> kList) {
   std::ofstream writer("output.txt");
   if (!writer) {       
-    std::cerr << "Error: file could not be opened" << "\n";
+    std::cerr << "Error: file could not be opened\n";
     exit(1);
   }
   for (unsigned iterator = 0; iterator < kList.size(); iterator++) 
@@ -94,14 +94,15 @@ void FibonacciWord::set_word_number(const unsigned kNewNumber) {
 }
 
 // Search between actual Fibonacci words and return the position
-int FibonacciWord::FibonacciSearch() const {
-  if (word_ == "a") {
+int FibonacciWord::FibonacciSearch(const char* kFiboRoot1, 
+                                   const char* kFiboRoot2) const {
+  if (word_ == kFiboRoot1) {
     return 1;
-  } else if (word_ == "b") {
+  } else if (word_ == kFiboRoot2) {
     return 2;
   } 
-  std::string first_position = "a";
-  std::string second_position = "b";
+  std::string first_position = kFiboRoot1;
+  std::string second_position = kFiboRoot2;
   unsigned counter = 3;
   std::string aux_position = first_position + second_position;
   while (aux_position.length() < size_) {
@@ -113,12 +114,13 @@ int FibonacciWord::FibonacciSearch() const {
   if (word_ == aux_position) {
     return counter;
   }
-  return - 1;
+  return - 1;  ///< Position was not found
 }
 
 /// Check if the attribute "word_" belongs to the Fibonacci sequence
-void FibonacciWord::FibonacciCheck() { 
-  const int kPosition = FibonacciSearch();
+void FibonacciWord::FibonacciCheck(const char* kFiboRoot1, 
+                                   const char* kFiboRoot2) { 
+  const int kPosition = FibonacciSearch(kFiboRoot1, kFiboRoot2);
   if (kPosition > 0) {
     is_a_fibonacci_word_ = true;
     word_number_ = kPosition;
