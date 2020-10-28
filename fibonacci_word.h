@@ -1,4 +1,3 @@
-///
 /// @class FibonacciWord
 ///
 /// @brief This class compares the attribute "word_" with a real Fibonacci Word
@@ -10,7 +9,7 @@
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
 /// @version Version 2: class with string of file
 /// @date 27 Oct 2020
-///
+
 
 #ifndef FIBONACCIWORD_H
 #define FIBONACCIWORD_H

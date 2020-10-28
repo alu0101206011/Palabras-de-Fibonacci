@@ -1,4 +1,3 @@
-///
 /// Universidad de La Laguna
 /// Escuela Superior de Ingeniería y Tecnología
 /// Grado en Ingeniería Informática
@@ -12,7 +11,7 @@
 /// 
 /// To compile: make 
 /// To clean files: make clean
-///
+
 
 #include <iostream>
 #include <string>
@@ -47,11 +46,9 @@ std::vector<FibonacciWord> CreateVector() {
   std::string data;
   std::vector<FibonacciWord> list;
   while (!reader.eof()) { 
-    //if (!' ') {
       reader >> data;
       FibonacciWord block(data, data.length());
       list.push_back(block);
-    //}
   }
   reader.close();
   return list;

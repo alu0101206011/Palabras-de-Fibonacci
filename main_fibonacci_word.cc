@@ -1,4 +1,3 @@
-///
 /// Universidad de La Laguna
 /// Escuela Superior de Ingeniería y Tecnología
 /// Grado en Ingeniería Informática
@@ -12,7 +11,6 @@
 /// 
 /// To compile: make 
 /// To clean files: make clean 
-///
 
 #include <iostream>
 #include <vector>
@@ -34,10 +32,8 @@ int main(int argc, char *argv[]) {
     return 1;
   }
   std::vector<FibonacciWord> list = CreateVector();
-  
   for (unsigned iterator = 0; iterator < list.size(); iterator++)
     list[iterator].FibonacciCheck(list[0].get_word(), list[1].get_word());
   WriteOnFile(list);
-
   return 0;
 }
