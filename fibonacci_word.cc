@@ -12,14 +12,12 @@
 /// To compile: make 
 /// To clean files: make clean
 
-
 #include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
 
 #include "fibonacci_word.h"
-
 
 // Show error messages in terminal
 void ErrorMessage(const int kError) {
@@ -46,9 +44,9 @@ std::vector<FibonacciWord> CreateVector() {
   std::string data;
   std::vector<FibonacciWord> list;
   while (!reader.eof()) { 
-      reader >> data;
-      FibonacciWord block(data, data.length());
-      list.push_back(block);
+    reader >> data;
+    FibonacciWord block(data, data.length());
+    list.push_back(block);
   }
   reader.close();
   return list;
@@ -127,7 +125,7 @@ void FibonacciWord::FibonacciCheck(const std::string kFiboRoot1,
 }
 
 // Write using an ostream as a parameter
-std::ostream& FibonacciWord::Write(std::ostream& os) const{ 
+std::ostream& FibonacciWord::Write(std::ostream& os) const { 
   if (is_a_fibonacci_word_) {
     return os << word_ << " is the word number " << word_number_ << "\n";
   } else {

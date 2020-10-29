@@ -10,7 +10,6 @@
 /// @version Version 2: class with string of file
 /// @date 27 Oct 2020
 
-
 #ifndef FIBONACCIWORD_H
 #define FIBONACCIWORD_H
 
@@ -20,16 +19,12 @@ class FibonacciWord {
     unsigned size_;
     bool is_a_fibonacci_word_;
     unsigned word_number_;
-
   public:
-
-    /// A constructor.
     /// @brief Initialize all attributes using the following parameters
     /// @param word 
     /// @param size 
     FibonacciWord(const std::string, const unsigned);
 
-    /// A destructor.
     /// @brief Default destructor
     ~FibonacciWord(void);
 
@@ -65,7 +60,6 @@ class FibonacciWord {
     friend std::ostream& operator<<(std::ostream&, const FibonacciWord);
 
   private:
-
     /// @brief Search between actual Fibonacci words and return the position
     /// @param kFiboRoot1
     /// @param kFiboRoot2

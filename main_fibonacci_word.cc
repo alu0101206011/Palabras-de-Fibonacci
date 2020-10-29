@@ -17,7 +17,6 @@
 
 #include "fibonacci_word.h"
 
-
 int main(int argc, char *argv[]) {
   if (argc != 3 && argc != 2) { ErrorMessage(1); return 1; }     
   if ((std::string)argv[1] == "--help" || (std::string)argv[1] == "-h")

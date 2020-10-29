@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -g -Wall -std=c++17
 DEPS = fibonacci_word.h
 OBJ = main_fibonacci_word.o fibonacci_word.o
-EXEC = fibonacci_word
+EXEC = fibonacci_words
 
 all: $(OBJ) 
 	$(CC) $(CFLAGS) -o $(EXEC) $^
