@@ -17,6 +17,9 @@ class FibonacciWord {
     bool is_a_fibonacci_word_;
     unsigned word_number_;
   public:
+    /// @brief Default constructor
+    FibonacciWord(void);
+
     /// @brief Initialize all attributes using the following parameters
     /// @param word 
     /// @param size 

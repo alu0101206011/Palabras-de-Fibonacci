@@ -64,7 +64,11 @@ void WriteOnFile(const std::vector<FibonacciWord> kList) {
   writer.close();
 }
 
-// Class FibbonacciWord constructor 
+// Class FibonacciWord default constructor
+FibonacciWord::FibonacciWord(void): word_(NULL), size_(0), 
+is_a_fibonacci_word_(false), word_number_(0) {}
+
+// Class FibonacciWord copy constructor 
 FibonacciWord::FibonacciWord(const std::string kWord, const unsigned kSize): 
 word_(kWord), size_(kSize), is_a_fibonacci_word_(false),
 word_number_(0) {}
