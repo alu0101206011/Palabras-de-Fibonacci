@@ -8,7 +8,7 @@ all: $(OBJ)
 	$(CC) $(CFLAGS) -o $(EXEC) $^
 
 %.o: %.cc $(DEPS)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) -c -o $@ $<
 
 
 .PHONY: clean
