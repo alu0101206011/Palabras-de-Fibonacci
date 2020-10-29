@@ -7,11 +7,8 @@
 /// @example word_ == actualFibonacciWord ? (Save information) : (reject this word)
 ///
 /// @author Anabel Díaz Labrador <alu0101206011@ull.edu.es>
-/// @version Version 2: class with string of file
+/// @version Version 2: class with string of a file
 /// @date 27 Oct 2020
-
-#ifndef FIBONACCIWORD_H
-#define FIBONACCIWORD_H
 
 class FibonacciWord {
   private:
@@ -78,5 +75,3 @@ std::vector<FibonacciWord> CreateVector(void);
 /// @brief Write from a vector using the friend function "<<"
 /// @param list
 void WriteOnFile(std::vector<FibonacciWord>); 
-
-#endif  // FIBONACCIWORD_H

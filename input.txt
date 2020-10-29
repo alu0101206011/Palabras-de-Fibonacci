@@ -1,11 +1,8 @@
-hello
-world
-helloworldworldhelloworld
 a
 b
 ab
 abbab
-bababbababbabbababbab
 abababaabbabaa
+bababbababbabbababbab
 yxyxyyxy
 dnasjk

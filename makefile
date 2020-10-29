@@ -14,4 +14,4 @@ all: $(OBJ)
 .PHONY: clean
 
 clean:
-	 bash -O extglob -c "rm -vf !(*.cc|*.h|"makefile"|input.txt)"
+	 bash -O extglob -c "rm -vf !(*.cc|*.h|"makefile"|input.txt|README.md)"
